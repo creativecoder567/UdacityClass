@@ -12,7 +12,7 @@
         android:textColor="@android:color/white"
         android:fontFamily="sans-serif-light"
         android:textSize="36sp"
-        android:text="Happy birthday ben"
+        android:text="Happy birthday sandy"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
@@ -23,7 +23,7 @@
         android:textSize="36sp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
-        android:text="From lyla"
+        android:text="From sarath"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
