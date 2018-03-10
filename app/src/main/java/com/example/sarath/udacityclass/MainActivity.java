@@ -23,7 +23,7 @@ import java.text.NumberFormat;
  */
 public class MainActivity extends AppCompatActivity {
     TextView quantityTextView;
-
+    int quantity=2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
      * This method is called when the order button is clicked.
      */
     public void submitOrder(View view) {
-        int quantity=2;
+        //int quantity=2;
         display(quantity);
         displayPrice(quantity*5);
     }
@@ -60,12 +60,16 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void increment(View view) {
-        int quantity=3;
-        quantityTextView.setText(""+3);
+
+        //quantityTextView.setText(""+3);
+        quantity= quantity+1;
+        display(quantity);
     }
 
     public void decrement(View view) {
-        int quantity=1;
-        quantityTextView.setText(""+1);
+
+        //quantityTextView.setText(""+1);
+        quantity= quantity-1;
+        display(quantity);
     }
 }
