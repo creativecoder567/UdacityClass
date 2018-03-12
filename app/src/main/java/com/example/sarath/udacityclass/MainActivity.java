@@ -24,6 +24,7 @@ import java.text.NumberFormat;
 public class MainActivity extends AppCompatActivity {
     TextView quantityTextView;
     int quantity=2;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
