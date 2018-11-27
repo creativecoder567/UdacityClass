@@ -19,10 +19,26 @@ public class PracticesetActivity extends AppCompatActivity {
         int weekend = 9;
         int optimalHours = 7 * 8;
 
+        int day1 = 15;
+        int day2 = 22;
+        int day3 = 18;
+        display(day1 + day2 + day3 / 3);
+/*
         int actualHours = weekday;
         actualHours = actualHours + weekend * 2;
         int solution = optimalHours - actualHours;
-        display(solution);
+        display(solution);*/
+
+        String firstName = "Lyla";
+        String lastName = "Fujiwara";
+        String contactInfo = firstName + " " + lastName;
+        contactInfo = "<" + lastName + "." + firstName + "@justjava.com>";
+        display(contactInfo);
+    }
+
+    private void display(String contactInfo) {
+        TextView t = findViewById(R.id.tvSolution);
+        t.setText(contactInfo);
     }
 
     private void display(int i) {

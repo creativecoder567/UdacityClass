@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/UdacityClass.iml" filepath="$PROJECT_DIR$/.idea/UdacityClass.iml" />
       <module fileurl="file://$PROJECT_DIR$/UdacityClass.iml" filepath="$PROJECT_DIR$/UdacityClass.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/uber/uber.iml" filepath="$PROJECT_DIR$/uber/uber.iml" />
     </modules>
   </component>
 </project>
