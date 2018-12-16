@@ -1,6 +1,5 @@
-package com.example.sarath.udacityclass.FragmentCommunication;
+package com.example.sarath.udacityclass.fragmentCommunication;
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 

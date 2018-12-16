@@ -1,4 +1,4 @@
-package com.example.sarath.udacityclass.FragmentCommunication;
+package com.example.sarath.udacityclass.fragmentCommunication;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -12,19 +12,18 @@ import android.widget.EditText;
 
 import com.example.sarath.udacityclass.R;
 
-public class FragmentB extends Fragment {
-    private FragmentBListener listener;
+public class FragmentA  extends Fragment {
+    private FragmentAListener listener;
     private EditText editText;
     private Button buttonOk;
 
-    public interface FragmentBListener {
-        void onInputBSent(CharSequence input);
+    public interface FragmentAListener{
+        void onInputASent(CharSequence input);
     }
-
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View v = inflater.inflate(R.layout.fragment_b, container, false);
+        View v = inflater.inflate(R.layout.fragment_a,container,false);
 
         editText = v.findViewById(R.id.edit_text);
         buttonOk = v.findViewById(R.id.button_ok);
@@ -32,31 +31,28 @@ public class FragmentB extends Fragment {
             @Override
             public void onClick(View v) {
                 CharSequence input = editText.getText();
-                listener.onInputBSent(input);
+                listener.onInputASent(input);
             }
         });
-
         return v;
     }
 
     public void updateEditText(CharSequence newText) {
         editText.setText(newText);
     }
-
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
-        if (context instanceof FragmentBListener) {
-            listener = (FragmentBListener) context;
-        } else {
-            throw new RuntimeException(context.toString()
-                    + " must implement FragmentBListener");
+        if (context instanceof FragmentAListener){
+            listener = (FragmentAListener) context;
+        }else {
+            throw new RuntimeException(context.toString()+" must implement FragmentAListener");
         }
     }
 
     @Override
     public void onDetach() {
         super.onDetach();
-        listener = null;
+        listener =null;
     }
 }

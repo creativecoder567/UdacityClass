@@ -1,4 +1,4 @@
-package com.example.sarath.udacityclass.FragmentCommunication;
+package com.example.sarath.udacityclass.fragmentCommunication;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -12,18 +12,19 @@ import android.widget.EditText;
 
 import com.example.sarath.udacityclass.R;
 
-public class FragmentA  extends Fragment {
-    private FragmentAListener listener;
+public class FragmentB extends Fragment {
+    private FragmentBListener listener;
     private EditText editText;
     private Button buttonOk;
 
-    public interface FragmentAListener{
-        void onInputASent(CharSequence input);
+    public interface FragmentBListener {
+        void onInputBSent(CharSequence input);
     }
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View v = inflater.inflate(R.layout.fragment_a,container,false);
+        View v = inflater.inflate(R.layout.fragment_b, container, false);
 
         editText = v.findViewById(R.id.edit_text);
         buttonOk = v.findViewById(R.id.button_ok);
@@ -31,28 +32,31 @@ public class FragmentA  extends Fragment {
             @Override
             public void onClick(View v) {
                 CharSequence input = editText.getText();
-                listener.onInputASent(input);
+                listener.onInputBSent(input);
             }
         });
+
         return v;
     }
 
     public void updateEditText(CharSequence newText) {
         editText.setText(newText);
     }
+
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
-        if (context instanceof FragmentAListener){
-            listener = (FragmentAListener) context;
-        }else {
-            throw new RuntimeException(context.toString()+" must implement FragmentAListener");
+        if (context instanceof FragmentBListener) {
+            listener = (FragmentBListener) context;
+        } else {
+            throw new RuntimeException(context.toString()
+                    + " must implement FragmentBListener");
         }
     }
 
     @Override
     public void onDetach() {
         super.onDetach();
-        listener =null;
+        listener = null;
     }
 }
