@@ -9,28 +9,34 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity" />
-        <activity android:name=".Lesson1and5" />
-        <activity android:name=".PracticesetActivity" />
-        <activity android:name=".CourtCounterActivity" />
-        <activity android:name=".fragmentCommunication.FragmentMainActivity"></activity>
-        <activity android:name=".architectural_components.ArchitectureMainActivity" />
-        <activity android:name=".Room.HomeActivity">
+        <activity android:name=".SwipedownToRefresh">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".viewModel.ViewMainActivity"
-            android:label="@string/title_activity_view_main"
-            android:theme="@style/AppTheme.NoActionBar">
+        <activity android:name=".MainActivity" />
+        <activity android:name=".Lesson1and5" />
+        <activity android:name=".PracticesetActivity" />
+        <activity android:name=".CourtCounterActivity" />
+        <activity android:name=".fragmentCommunication.FragmentMainActivity" />
+        <activity android:name=".architectural_components.ArchitectureMainActivity" />
+        <activity android:name=".Room.HomeActivity">
+
+            <!--
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+            -->
+        </activity>
+        <activity
+            android:name=".viewModel.ViewMainActivity"
+            android:label="@string/title_activity_view_main"
+            android:theme="@style/AppTheme.NoActionBar">
+
         </activity>
     </application>
 
